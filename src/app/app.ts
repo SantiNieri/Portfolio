@@ -1,12 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { Proyecto } from './models/proyecto';
+import { ProyectosService } from './services/proyectos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('portfolio');
+
+  proyectos: Proyecto[] = [];
+
+  constructor(private proyectosService: ProyectosService) {
+    this.proyectosService.obtenerProyectos().subscribe(data => {
+      this.proyectos = data;
+    });
+  }
 }

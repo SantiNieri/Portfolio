@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Carrusel",
+    "descripcion": "Proyecto que implementa un carrusel de imágenes.",
+    "github": "https://github.com/SantiNieri/carrusel"
+  },
+  {
+    "nombre": "API NERD",
+    "descripcion": "Aplicación que consume datos desde una API.",
+    "github": "https://github.com/SantiNieri/API-NERD"
+  },
+  {
+    "nombre": "Local Storage",
+    "descripcion": "Proyecto que utiliza almacenamiento local.",
+    "github": "https://github.com/SantiNieri/LocalStorach"
+  },
+  {
+    "nombre": "Robot",
+    "descripcion": "Proyecto de práctica con elementos visuales.",
+    "github": "https://github.com/SantiNieri/Robot"
+  }
+]
