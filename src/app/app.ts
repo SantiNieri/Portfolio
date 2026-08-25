@@ -1,23 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { Proyecto } from './models/proyecto';
-import { ProyectosService } from './services/proyectos';
+import { RouterOutlet } from '@angular/router';
+import { Navbar } from './components/navbar/navbar';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterOutlet, Navbar, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-
-  proyectos: Proyecto[] = [];
-
-  constructor(private proyectosService: ProyectosService) {
-    this.proyectosService.obtenerProyectos().subscribe(data => {
-      this.proyectos = data;
-    });
-  }
-}
+export class App {}

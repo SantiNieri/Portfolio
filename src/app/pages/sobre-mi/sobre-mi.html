@@ -1,0 +1,25 @@
+<main>
+  <section class="container seccion">
+    <p class="eyebrow"># sobre-mi</p>
+    <h1>Sobre mí</h1>
+    <p>
+      Soy estudiante de la Escuela Secundaria N°713 y estoy dando mis primeros
+      pasos en el desarrollo web. Me interesa entender no solo cómo se ve una
+      página, sino cómo está armada por dentro: estructura, estilos y lógica
+      trabajando juntos.
+    </p>
+    <p>
+      Este portfolio reúne proyectos que hice practicando distintas
+      tecnologías, cada uno enfocado en un concepto puntual.
+    </p>
+  </section>
+
+  <section class="container seccion">
+    <p class="eyebrow"># stack</p>
+    <ul class="skills">
+      @for (habilidad of habilidades; track habilidad) {
+        <li class="skills__item">{{ habilidad }}</li>
+      }
+    </ul>
+  </section>
+</main>

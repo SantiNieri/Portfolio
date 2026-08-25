@@ -1,0 +1,27 @@
+<header class="navbar">
+  <div class="container navbar__bar">
+    <a routerLink="/" class="navbar__brand" (click)="cerrarMenu()">
+      <span class="navbar__prompt">~/</span>santiago-nieri
+    </a>
+
+    <button
+      class="navbar__toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuAbierto()"
+      aria-controls="menu-principal"
+      aria-label="Abrir menú de navegación"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu-principal" class="navbar__nav" [class.navbar__nav--abierto]="menuAbierto()">
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }" (click)="cerrarMenu()">inicio</a>
+      <a routerLink="/sobre-mi" routerLinkActive="activo" (click)="cerrarMenu()">sobre-mi</a>
+      <a routerLink="/proyectos" routerLinkActive="activo" (click)="cerrarMenu()">proyectos</a>
+      <a routerLink="/proyectos/nuevo" routerLinkActive="activo" (click)="cerrarMenu()">nuevo +</a>
+    </nav>
+  </div>
+</header>

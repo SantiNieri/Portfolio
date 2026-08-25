@@ -1,0 +1,29 @@
+{
+  "proyectos": [
+    {
+      "id": "1",
+      "nombre": "Carrusel",
+      "descripcion": "Proyecto que implementa un carrusel de imágenes utilizando tecnologías web para practicar diseño e interacción de usuario.",
+      "github": "https://github.com/SantiNieri/carrusel"
+    },
+    {
+      "id": "2",
+      "nombre": "API NERD",
+      "descripcion": "Aplicación que consume datos desde una API externa para practicar el manejo de peticiones y visualización de información dinámica.",
+      "github": "https://github.com/SantiNieri/API-NERD"
+    },
+    {
+      "id": "3",
+      "nombre": "Local Storage",
+      "descripcion": "Proyecto orientado al almacenamiento de información en el navegador utilizando Local Storage para mantener datos entre sesiones.",
+      "github": "https://github.com/SantiNieri/LocalStorach"
+    },
+    {
+      "id": "4",
+      "nombre": "Robot",
+      "descripcion": "Proyecto de práctica enfocado en la creación y manipulación de elementos visuales mediante tecnologías web.",
+      "github": "https://github.com/SantiNieri/Robot"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,49 @@
+<main>
+  <section class="container seccion">
+    <div class="seccion__encabezado">
+      <div>
+        <p class="eyebrow">$ ls proyectos/</p>
+        <h1>Mis proyectos</h1>
+      </div>
+      <a class="btn" routerLink="/proyectos/nuevo">+ nuevo proyecto</a>
+    </div>
+
+    @if (cargando()) {
+      <p class="estado">Cargando proyectos...</p>
+    }
+
+    @if (error()) {
+      <p class="estado estado--error">
+        No se pudo conectar con la API. ¿Está corriendo json-server en el puerto 3000?
+      </p>
+    }
+
+    @if (!cargando() && !error()) {
+      @if (proyectos().length === 0) {
+        <p class="estado">Todavía no hay proyectos cargados.</p>
+      }
+
+      <div class="grilla">
+        @for (proyecto of proyectos(); track proyecto.id) {
+          <article class="tarjeta">
+            <h2>{{ proyecto.nombre }}</h2>
+            <p>{{ proyecto.descripcion }}</p>
+            <div class="tarjeta__acciones">
+              <a class="btn" [href]="proyecto.github" target="_blank" rel="noopener">
+                ver en github
+              </a>
+              <button
+                type="button"
+                class="btn btn--danger"
+                (click)="eliminar(proyecto)"
+                [disabled]="eliminandoId() === proyecto.id"
+              >
+                {{ eliminandoId() === proyecto.id ? 'eliminando...' : 'eliminar' }}
+              </button>
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </section>
+</main>

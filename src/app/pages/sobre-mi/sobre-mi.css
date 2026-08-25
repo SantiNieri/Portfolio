@@ -1,0 +1,10 @@
+.seccion { padding: 2.5rem 1.25rem; max-width: 700px; }
+.skills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.skills__item {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.7rem;
+}
